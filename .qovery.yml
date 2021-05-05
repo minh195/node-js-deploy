@@ -1,0 +1,15 @@
+---
+application:
+  name: "node-js-deploy"
+  project: "first-deploy"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "food"
+  version: "4.4"
+routers:
+- name: "main-node-js-deploy"
+  routes:
+  - application_name: "node-js-deploy"
+    paths:
+    - "/*"
