@@ -12,8 +12,18 @@ var app = express();
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
+require('dotenv').config();
+const {
+  MONGO_USERNAME,
+  MONGO_PASSWORD,
+  MONGO_HOSTNAME,
+  MONGO_PORT,
+  MONGO_DB
+} = process.env;
 
-const uri = "mongodb+srv://minhtm88:Minh190597@clusterfood.0jjya.mongodb.net/food?retryWrites=true&w=majority";
+console.log("MONGO_USERNAME", MONGO_USERNAME)
+
+const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@clusterfood.0jjya.mongodb.net/${MONGO_DB}?retryWrites=true&w=majority`;
 
 const options = {
   useNewUrlParser: true,
