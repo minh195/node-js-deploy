@@ -21,8 +21,6 @@ const {
   MONGO_DB
 } = process.env;
 
-console.log("MONGO_USERNAME", MONGO_USERNAME)
-
 const uri = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@clusterfood.0jjya.mongodb.net/${MONGO_DB}?retryWrites=true&w=majority`;
 
 const options = {
